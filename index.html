@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Primary Meta Tags -->
+    <title>TempMail Pro - Free Temporary Email Service</title>
+    <meta name="title" content="TempMail Pro - Free Temporary Email Service">
+    <meta name="description"
+        content="TempMail Pro lets you generate a temporary, disposable email address instantly. Stay anonymous, avoid spam, and protect your privacy — no signup required.">
+    <meta name="keywords"
+        content="temp mail, disposable email, temporary email, free email, anonymous email, tempmail pro, spam free email">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://tempmailspro.com">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://tempmailspro.com">
+    <meta property="og:title" content="TempMail Pro - Free Temporary Email Service">
+    <meta property="og:description"
+        content="Generate temporary email addresses and receive messages instantly. No signup, no spam.">
+    <meta property="og:image" content="https://tempmailspro.com/preview.png">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://tempmailspro.com">
+    <meta name="twitter:title" content="TempMail Pro - Free Temporary Email Service">
+    <meta name="twitter:description" content="Create free, disposable emails in seconds and avoid spam.">
+    <meta name="twitter:image" content="https://tempmailspro.com/preview.png">
+
+    <!-- Favicon -->
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+     <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "url": "https://tempmailspro.com",
+  "logo": "https://tempmailspro.com/favicon.ico"
+}
+</script>
+
+    
+    <!-- Fonts & Styles -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+    <!-- ad script -->
+    <meta name="google-adsense-account" content="ca-pub-8611225687740241">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8611225687740241"
+        crossorigin="anonymous"></script>
+
+    <!-- Google Site Verification -->
+    <meta name="google-site-verification" content="ldu1vb2wwEm8j6eNo0OMNCm4ysT9TzCPLOjQqpnnPGw" />
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-LNBMVJY68M"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-LNBMVJY68M');
+    </script>
+
+    <!-- SEO Optimization -->
+    <meta name="description" content="TempMailsPro - Free disposable email service to protect your privacy online.">
+    <meta name="keywords" content="temporary email, disposable email, temp mail, anonymous email, free email service">
+    <meta name="author" content="TempMailsPro">
+    <meta property="og:title" content="TempMailsPro - Free Temporary Email Service">
+    <meta property="og:description" content="Create free disposable temporary email addresses instantly to stay safe online.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://tempmailspro.com/">
+    <meta property="og:image" content="https://tempmailspro.com/preview.png">
+    <!-- Placeholder for Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXX"
+            crossorigin="anonymous"></script>
+    
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <div class="logo">
+                <i class="fas fa-envelope"></i>
+                <h1>TempMailsPro</h1>
+            </div>
+            <nav>
+                <a href="index.html"><i class="fa fa-home"></i> Home</a>
+                <a href="#features"><i class="fas fa-star"></i> Features</a>
+                <a href="#FAQ"><i class="fas fa-question-circle"></i> FAQ</a>
+                <div class="theme-toggle" id="theme-toggle">
+                    <i class="fas fa-moon"></i>
+                </div>
+            </nav>
+        </header>
+
+        <!-- Hero Section -->
+        <section class="hero">
+            <h1>Get a Real Temp Email Instantly</h1>
+            <p>Create a disposable email address at tempmailspro.com in seconds. NO signup required.</p>
+            <a href="#generator" class="hero-btn pulse">
+                <i class="fas fa-envelope"></i> Get Your Temp Email Now
+            </a>
+        </section>
+
+        <!-- Main Content -->
+        <main>
+            <!-- Email Generator -->
+            <div class="card email-generator" id="generator">
+                <h2><i class="fas fa-envelope"></i> Your Temporary Email</h2>
+                <div class="email-display">
+                    <span id="generated-email"></span>
+                    <button id="copy-btn"><i class="fas fa-copy"></i> Copy</button>
+                </div>
+                <button id="generate-btn"><i class="fas fa-plus"></i> Generate New Address</button>
+                <p id="timer"><i class="fas fa-hourglass-start"></i> Expires in: 00:00</p>
+            </div>
+
+            <!-- 1force rebuild -->
+            <!-- Inbox Section -->
+            <div class="card">
+                <h2><i class="fas fa-inbox"></i> Inbox <span id="unread-count" class="unread-badge">0</span></h2>
+                <div class="tabs">
+                    <div class="tab active" data-tab="primary">Inbox</div>
+                </div>
+
+                <div class="inbox-container">
+                    <div class="inbox-header">
+                        <div class="inbox-controls">
+                            <button id="refresh-btn"><i class="fas fa-sync-alt"></i> Refresh</button>
+                            <button id="delete-btn"><i class="fas fa-trash-alt"></i> Delete</button>
+                        </div>
+                        <div class="inbox-search">
+                            <input type="text" id="search-input" placeholder="Search emails...">
+                        </div>
+                    </div>
+
+                    <div class="tab-content active" id="primary-content">
+                        <div class="email-list" id="email-list">
+                            <!-- Emails will be populated by JavaScript -->
+                        </div>
+                    </div>
+                    <div class="tab-content" id="promotions-content">
+                        <div class="no-emails">
+                            <i class="fas fa-tag fa-2x"></i>
+                            <p>No promotional emails yet</p>
+                        </div>
+                    </div>
+                    <div class="tab-content" id="social-content">
+                        <div class="no-emails">
+                            <i class="fas fa-users fa-2x"></i>
+                            <p>No social emails yet</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Email Detail View -->
+            <div class="card" id="email-detail" style="display: none;">
+                <div class="email-detail-header">
+                    <button id="back-to-inbox"><i class="fas fa-arrow-left"></i> Back to Inbox</button>
+                    <h3 id="detail-subject">Welcome to TempMailsPro</h3>
+                </div>
+                <div class="email-meta">
+                    <div><strong>From:</strong> <span id="detail-sender">support@tempmailspro.com</span></div>
+                    <div><strong>Date:</strong> <span id="detail-date">July 10, 2025 10:30 AM</span></div>
+                </div>
+                <div class="email-body">
+                    <p>Hello there,</p>
+                    <p>Thank you for choosing TempMailsPro! We're excited to have you as a user.</p>
+                    <p>With our service, you can:</p>
+                    <ul>
+                        <li>Generate temporary email addresses instantly</li>
+                        <li>Receive emails without signing up</li>
+                        <li>Keep your personal inbox free from spam</li>
+                        <li>Access emails for 10 minutes before they expire</li>
+                    </ul>
+                    <p>If you have any questions, feel free to reach out to our support team.</p>
+                    <p>Best regards,<br>The TempMailsPro Team</p>
+                </div>
+                <div class="email-actions">
+                    <button><i class="fas fa-reply"></i> Reply</button>
+                    <button><i class="fas fa-share"></i> Forward</button>
+                    <button><i class="fas fa-trash-alt"></i> Delete</button>
+                </div>
+            </div>
+
+            <!-- Ad 1: ad-container-->
+            <div class="ad-container">
+                <!-- ad23 -->
+                <ins class="adsbygoogle" style="display:block; text-align:center;"
+                    data-ad-client="ca-pub-8611225687740241" data-ad-slot="8920729436" data-ad-format="auto"
+                    data-full-width-responsive="true"></ins>
+                <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </div>
+
+            <!-- How It Works -->
+            <div class="card tutorial" id="features">
+                <h3><i class="fas fa-info-circle"></i> How Temp Mail Works</h3>
+                <div class="tutorial-steps">
+                    <div class="step">
+                        <span>1</span>
+                        <p>Get a random disposable email</p>
+                    </div>
+                    <div class="step">
+                        <span>2</span>
+                        <p>Use it to register or sign up</p>
+                    </div>
+                    <div class="step">
+                        <span>3</span>
+                        <p>Instantly receive messages</p>
+                    </div>
+                    <div class="step">
+                        <span>4</span>
+                        <p>Messages auto-delete in 10 minutes</p>
+                    </div>
+                </div>
+            </div>
+            <!-- About Section -->
+            <div class="card" id="about">
+                <h3><i class="fas fa-info-circle"></i> About TempMails Pro</h3>
+                <p>
+                    TempMails Pro is your go‑to free, web‑based disposable email service. No accounts, no passwords, no
+                    spam—just
+                    a throwaway inbox that lives for 10 minutes. Perfect for one‑time sign‑ups, verifications, and
+                    protecting your
+                    real email address from unwanted newsletters and trackers.
+                </p>
+            </div>
+            <!-- Ad 2: ad-container -->
+            <div class="ad-container">
+                <!-- ad44 -->
+                <ins class="adsbygoogle" style="display:block; text-align:center;"
+                    data-ad-client="ca-pub-8611225687740241" data-ad-slot="7357200472" data-ad-format="auto"
+                    data-full-width-responsive="true"></ins>
+                <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </div>
+            <!-- FAQ Section -->
+            <div class="card" Id="faq">
+                <h3><i class="fas fa-question-circle" id="FAQ"></i> Frequently Asked Questions</h3>
+
+                <div class="faq-item">
+                    <h4>What is TempMails Pro?</h4>
+                    <div class="answer">
+                        <p>
+                            A free, receive‑only disposable‑email service. Generate a random address—no signup
+                            required—to get
+                            verification codes, newsletters, or any one‑time messages, and keep your real inbox clean.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <h4>How do I generate a new email address?</h4>
+                    <div class="answer">
+                        <p>
+                            Click the <strong>Generate New Address</strong> button. We’ll display a random email
+                            (e.g. <code>user123@ourtempdomain.org</code>) that’s live for 10 minutes.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <h4>How long does my temporary inbox last?</h4>
+                    <div class="answer">
+                        <p>
+                            Exactly 10 minutes. You’ll see a countdown timer—once it reaches zero, the inbox and all
+                            messages are
+                            permanently deleted.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <h4>Can I pick my domain?</h4>
+                    <div class="answer">
+                        <p>
+                            We rotate through several curated domains to maximize availability. You can’t choose one
+                            manually—
+                            just click “Generate” and use what you get.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <h4>Why isn’t my verification email showing up?</h4>
+                    <div class="answer">
+                        <ul>
+                            <li>Double‑check that you copied the correct address.</li>
+                            <li>Click <strong>Refresh</strong> to poll the server again.</li>
+                            <li>Some senders block disposable domains—try generating a new address or using a different
+                                one.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <h4>Can I extend the 10‑minute timer?</h4>
+                    <div class="answer">
+                        <p>
+                            Not at this time. To keep the service free and stateless, each session is capped at 10
+                            minutes.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <h4>Can I send emails from my TempMails Pro address?</h4>
+                    <div class="answer">
+                        <p>
+                            No—it’s a receive‑only service. You can’t reply or send, only receive messages.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <h4>Is my data private?</h4>
+                    <div class="answer">
+                        <p>
+                            We don’t log personal info or store messages beyond your session. After expiration,
+                            everything is
+                            permanently deleted.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <h4>Do you offer an API?</h4>
+                    <div class="answer">
+                        <p>
+                            Yes—our API lets you programmatically generate addresses and fetch messages. Check the “API
+                            Documentation”
+                            in the footer for details and code samples.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <h4>How can I get support or report abuse?</h4>
+                    <div class="answer">
+                        <p>
+                            Use the <strong>Contact Us</strong> link in the footer or email
+                            <a href="mailto:support@tempmailspro.com">support@tempmailspro.com</a>. We typically reply
+                            within 24 hours.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer>
+            <div class="footer-links">
+                <a href="#" id="openPrivacy">Privacy Policy</a>
+                <a href="#" id="openTerms">Terms of Service</a>
+                <a href="#" id="openContact">Contact Us</a>
+                <a href="#" id="openApi">API Documentation</a>
+            </div>
+            <p class="footer-note">© 2025 tempmailspro.com - Free Temporary Email Service. All rights reserved. This
+                service
+                is 100% free and supported by advertisements.</p>
+
+
+            <!-- Privacy Policy Modal -->
+            <div id="privacyModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="privacyTitle">
+                <div class="modal-content">
+                    <button id="closePrivacy" class="close" aria-label="Close">&times;</button>
+                    <h2 id="privacyTitle">Privacy Policy</h2>
+                    <p><strong>Effective Date:</strong> July 13, 2025</p>
+
+                    <p>TempMails Pro values your privacy. Here's what you need to know:</p>
+
+                    <h3>1. Data We Collect</h3>
+                    <ul>
+                        <li>Temporary email addresses you generate</li>
+                        <li>IP address (for abuse prevention)</li>
+                        <li>Browser/device info (for analytics or ad personalization)</li>
+                    </ul>
+
+                    <h3>2. How We Use It</h3>
+                    <ul>
+                        <li>To create and manage temp inboxes</li>
+                        <li>To show ads and improve service performance</li>
+                        <li>To detect fraud or abuse</li>
+                    </ul>
+
+                    <h3>3. Email Expiry</h3>
+                    <p>All inboxes and emails are automatically deleted after 10 minutes. We do not store messages
+                        permanently.</p>
+
+                    <h3>4. Third Parties</h3>
+                    <p>We use Google AdSense and may share non-personal data with ad networks for performance or fraud
+                        detection.</p>
+
+                    <h3>5. Your Rights</h3>
+                    <p>You don’t need to request deletion — everything is automatically wiped. We don’t store any
+                        personal user accounts.</p>
+
+                    <h3>6. Contact</h3>
+                    <p>If you have questions, email <a
+                            href="mailto:support@tempmailspro.com">support@tempmailspro.com</a></p>
+                </div>
+            </div>
+
+
+
+            <!-- 📜 Terms of Service Modal -->
+            <div id="termsModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="termsTitle">
+                <div class="modal-content">
+                    <button id="closeTerms" class="close" aria-label="Close">&times;</button>
+                    <h2 id="termsTitle">Terms of Service</h2>
+                    <p><strong>Effective Date:</strong> July 13, 2025</p>
+
+                    <p>By using TempMailsPro, you agree to the following terms:</p>
+
+                    <ul>
+                        <li>This is a disposable, receive-only email service intended for temporary use only.</li>
+                        <li>You agree not to use TempMailsPro for illegal activities, abuse, or impersonation.</li>
+                        <li>We do not guarantee email deliverability from all sources.</li>
+                        <li>We auto-delete inboxes after 10 minutes — no backups.</li>
+                        <li>TempMail Pro is provided “as-is” with no warranties.</li>
+                    </ul>
+
+                    <p>Questions? <a href="mailto:support@tempmailspro.com">support@tempmailspro.com</a></p>
+                </div>
+            </div>
+
+            <!--Contact Us Modal -->
+            <div id="contactModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="contactTitle">
+                <div class="modal-content">
+                    <button id="closeContact" class="close" aria-label="Close">&times;</button>
+                    <h2 id="contactTitle">Contact Us</h2>
+                    <p>If you have questions, issues, or suggestions, please email us directly at:</p>
+
+                    <p><a href="mailto:support@tempmailspro.com">support@tempmailspro.com</a></p>
+
+                    <p>We usually respond within 24 hours on weekdays.</p>
+                </div>
+            </div>
+
+
+            <div id="apiModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="apiTitle">
+                <div class="modal-content">
+                    <button id="closeApi" class="close" aria-label="Close">&times;</button>
+                    <h2 id="apiTitle">API Documentation</h2>
+
+                    <p>This API lets you programmatically create temp email accounts, fetch messages, and check inboxes.
+                    </p>
+
+                    <h3>Base URL:</h3>
+                    <code>https://api.mail.tm</code>
+
+                    <h3>1. Create Account</h3>
+                    <code>POST /accounts</code>
+                    <pre>{
+                        "address": "user@domain.com",
+                        "password": "yourPassword123"
+                        }</pre>
+
+                    <h3>2. Get Token</h3>
+                    <code>POST /token</code>
+                    <pre>{
+                        "address": "user@domain.com",
+                        "password": "yourPassword123"
+                        }</pre>
+
+                    <h3>3. Fetch Messages</h3>
+                    <code>GET /messages</code>
+                    <pre>
+                        Authorization: Bearer YOUR_TOKEN
+                    </pre>
+
+                    <h3>4. Get Message by ID</h3>
+                    <code>GET /messages/:id</code>
+
+                    <p>📌 <strong>Note:</strong> All messages are deleted automatically after ~10 minutes.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Notification Element -->
+    <div class="notification" id="notification">
+        New email received!
+    </div>
+    <script>
+        (function () {
+            const toggleBtn = document.getElementById('theme-toggle');
+            const root = document.documentElement; // <html>
+            const storageKey = 'theme';            // localStorage key
+
+            // on load: read saved theme
+            const saved = localStorage.getItem(storageKey);
+            if (saved === 'light') {
+                root.classList.add('light-theme');
+                toggleBtn.innerHTML = '<i class="fas fa-sun"></i>';
+            }
+
+            toggleBtn.addEventListener('click', () => {
+                const isLight = root.classList.toggle('light-theme');
+                // swap the icon
+                toggleBtn.innerHTML = isLight
+                    ? '<i class="fas fa-sun"></i>'
+                    : '<i class="fas fa-moon"></i>';
+                // persist preference
+                localStorage.setItem(storageKey, isLight ? 'light' : 'dark');
+            });
+        })();
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
